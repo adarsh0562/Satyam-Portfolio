@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!--Basic-->
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Satyam Kumar</title>
+	<link rel="icon" href="vcard/images/profile.jpg" type="image/png" sizes="16x16">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+
+	<meta name="author" content="Satyam Kumar" />
+	<!--
+		Load Fonts
+	-->
+	<link
+		href="https://fonts.googleapis.com/css?family=Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+		rel="stylesheet">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.css">
+	<!--
+		Load CSS
+	-->
+	<link rel="stylesheet" href="vcard/css/basic.css" />
+	<link rel="stylesheet" href="vcard/css/layout.css" />
+	<link rel="stylesheet" href="vcard/css/blogs.css" />
+	<link rel="stylesheet" href="vcard/css/ionicons.css" />
+	<link rel="stylesheet" href="vcard/css/magnific-popup.css" />
+	<link rel="stylesheet" href="vcard/css/animate.css" />
+	<link rel="stylesheet" href="vcard/css/gradient.css" />
+	<link rel="stylesheet" href="vcard/css/owl.carousel.css" />
+	<link rel="stylesheet" href="vcard/css/blog-not-found.css" />
+
+	<link rel="stylesheet" href="vcard/css/template-colors/green.css" />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+	<!--
+		Favicons
+	-->
+	<!-- <link rel="shortcut icon" href="vcard/images/favicons/favicon-16x16.png"> -->
+	<script type="text/javascript">
+		function disableselect(e) {
+			return false;
+		}
+
+		function reEnable() {
+			return true;
+		}
+
+		document.onselectstart = new Function("return false");
+
+		if (window.sidebar) {
+			document.onmousedown = disableselect;
+			document.onclick = reEnable;
+		}
+		document.onkeydown = function (e) {
+			if (e.ctrlKey &&
+				(e.keyCode === 67 ||
+					e.keyCode === 86 ||
+					e.keyCode === 85 ||
+					e.keyCode === 117)) {
+				return false;
+			} else {
+				return true;
+			}
+		};
+		document.addEventListener("keydown", function(e) {
+			if (e.ctrlKey && e.key==="u"){
+
+				e.preventDefault();
+			}
+		});
+
+		document.addEventListener('contextmenu', event => event.preventDefault());
+		document.addEventListener("contextmenu", function (e) {
+			e.preventDefault();
+		}, false);
+
+		function getMyCurrentAge() {
+			var strDate = new Date();
+			var shortYear = strDate.getFullYear();
+			var age = shortYear.toString().substr(-2);
+			document.getElementById("myAge").innerHTML = age;	
+		}
+		
+		function calculateExperience(startDate, endDate = new Date(), elementId = null) {
+			const start = new Date(startDate);
+			const end = endDate === "present" ? new Date() : new Date(endDate);
+			const diffInMs = Math.abs(end - start);
+			const diffInYears = (diffInMs / (1000 * 60 * 60 * 24 * 365)).toFixed(2);
+		
+			if (elementId) {
+				document.getElementById(elementId).innerHTML = diffInYears;
+			}
+			return parseFloat(diffInYears);
+		}
+
+		function getMyExperience() {
+			let totalExp = 0;
+			
+			// Company 1 (WebGuru: 12 Jul 2021 – 20 Nov 2021)
+			totalExp += calculateExperience("2021-07-12", "2021-11-20", "my1stExp");
+			
+			// Company 2 (TCS: 25 Nov 2021 – 28 Jan 2025)
+			totalExp += calculateExperience("2021-11-25", "2025-01-28", "my2ndExp");
+		
+			// Company 3 (Cognizant: 17 Feb 2025 – Present)
+			totalExp += calculateExperience("2025-02-17", "present", "my3rdExp");
+		
+			document.getElementById("myTotalExp").innerHTML = totalExp.toFixed(2);
+		}
+
+
+		function onLoadmethodsCalling() {
+			getMyCurrentAge();
+			getMyExperience();
+		}
+	</script>
+</head>
+
+<body oncopy="return false" oncut="return false" onpaste="return false" onload="onLoadmethodsCalling();">
+	<div class="page">
+
+		<!-- preloader -->
+		<div class="preloader">
+			<div class="centrize full-width">
+				<div class="vertical-center">
+					<div class="spinner">
+						<div class="double-bounce1"></div>
+						<div class="double-bounce2"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- background -->
+		<div class="background gradient">
+			<ul class="bg-bubbles">
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+		<!--
+			Container
+		-->
+		<div class="container opened" data-animation-in="fadeInUp" data-animation-out="fadeOutUp">
+			<!--
+				Header
+			-->
+			<header class="header">
+				<!-- menu -->
+				<div class="top-menu">
+					<ul>
+						<li class="active">
+							<a href="#about-card">
+								<span class="icon ion-person"></span>
+								<span class="link">About</span>
+							</a>
+						</li>
+						<li>
+							<a href="#resume-card">
+								<span class="icon ion-android-list"></span>
+								<span class="link">Resume</span>
+							</a>
+						</li>
+						<li>
+							<a href="#works-card">
+								<span class="icon ion-paintbrush"></span>
+								<span class="link">Works</span>
+							</a>
+						</li>
+						<li>
+							<a href="#blog-card">
+								<span class="icon ion-chatbox-working"></span>
+								<span class="link">Blog</span>
+							</a>
+						</li>
+						<li>
+							<a href="#contacts-card">
+								<span class="icon ion-at"></span>
+								<span class="link">Contact</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<!--
+				Card - Started
+			-->
+			<div class="card-started" id="home-card">
+				<!--
+					Profile
+				-->
+				<div class="profile">
+					<!-- profile image -->
+					<div class="slide" style="background-image: url(vcard/images/laptop.jpg);"></div>
+					<!-- profile photo -->
+					<div class="image">
+						<img src="vcard/images/profile.jpg" alt="" />
+					</div>
+					<!-- profile titles -->
+			    <div class="title"><span style="color:darkblue;font-weight: bold;">Satyam Kumar</span></div>
+			    <div class="subtitle" style="color: black;">📱 iOS App Developer at <br /><span
+				    style="color:red;font-weight: bold;">V Group Inc., Bhopal, Madhya Pradesh, India</span><br />
+				    Crashlytics | SwiftLint | APNS
+			    </div>
+					<!-- profile socials -->
+						<div class="social">
+							<a target="_blank" href="https://www.linkedin.com/in/satyamkumar-014597181"><span class="fab fa-linkedin"></span></a>
+						</div>
+					<!-- profile buttons -->
+						<div class="lnks">
+							<a href="#contacts-card" class="lnk discover">
+								<span class="text">Contact Me</span>
+								<span class="arrow"></span>
+							</a>
+						</div>
+				</div>
+			</div>
+			<!-- 
+				Card - About
+			-->
+			<div class="card-inner animated active" id="about-card">
+				<div class="card-wrap">
+					<!-- 
+						About 
+					-->
+					<div class="content about">
+						<!-- title -->
+						<div class="title">About Me</div>
+						<!-- content -->
+						<div class="row">
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="text-box">
+									<p>
+										Passionate iOS App Developer with over 5 years of experience in designing, developing, and maintaining high-quality mobile applications. Skilled in Crashlytics, SwiftLint, and APNS. Dedicated to delivering robust and user-friendly solutions for clients. Currently working at V Group Inc., Bhopal, Madhya Pradesh, India.
+									</p>
+								</div>
+								<div class="info-list">
+									<ul>
+										<li><strong>Mobile: </strong> 9304712071</li>
+										<li><strong>Email: </strong> satyamgupta3333@gmail.com</li>
+										<li><strong>LinkedIn: </strong> <a href="https://www.linkedin.com/in/satyamkumar-014597181" target="_blank">satyamkumar-014597181</a></li>
+										<li><strong>Location: </strong> Bhopal, Madhya Pradesh, India</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!--
+						Services
+					-->
+					<div class="content services">
+						<!-- title -->
+						<div class="title">Top Skills</div>
+						<!-- content -->
+						<div class="row service-items border-line-v">
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-h">
+								<div class="service-item">
+									<div class="icon"><span class="ion ion-ios-analytics"></span></div>
+									<div class="name">Crashlytics</div>
+									<p>
+										Proficient in integrating and utilizing Crashlytics for real-time crash reporting and analytics in iOS applications.
+									</p>
+								</div>
+							</div>
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-h">
+								<div class="service-item">
+									<div class="icon"><span class="ion ion-ios-checkmark"></span></div>
+									<div class="name">SwiftLint</div>
+									<p>
+										Experienced in maintaining code quality and consistency using SwiftLint in Swift projects.
+									</p>
+								</div>
+							</div>
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-h">
+								<div class="service-item">
+									<div class="icon"><span class="ion ion-ios-bell"></span></div>
+									<div class="name">APNS</div>
+									<p>
+										Skilled in implementing Apple Push Notification Service (APNS) for seamless user engagement.
+									</p>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!--
+						Price Tables
+					-->
+
+					<!--
+						Fun Fact
+					-->
+					<div class="content fuct">
+						<!-- title -->
+						<div class="title">Achievements</div>
+						<!-- content -->
+						<div class="row fuct-items">
+							<!-- fuct item -->
+							<div class="col col-d-4 col-t-4 col-m-6 border-line-v">
+								<div class="fuct-item">
+									<div class="icon"><span class="ion ion-ios-paper"></span></div>
+									<div class="name">Certifications is in progress</div>
+								</div>
+							</div>
+							<!-- fuct item -->
+							<div class="col col-d-4 col-t-4 col-m-6 border-line-v">
+								<div class="fuct-item">
+									<div class="icon"><span class="ion ion-trophy"></span></div>
+									<div class="name">4 Times One the Spot Award won</div>
+								</div>
+							</div>
+							<!-- fuct item -->
+							<div class="col col-d-4 col-t-4 col-m-6 border-line-v">
+								<div class="fuct-item">
+									<div class="icon"><span class="ion ion-ios-book"></span></div>
+									<div class="name">Received multiple client appriciation. </div>
+								</div>
+							</div>
+
+
+							
+							<div class="clear"></div>
+						</div>
+					</div>
+					<!--
+						Clients
+					-->
+
+				</div>
+			</div>
+			<!--
+				Card - Resume
+			-->
+			<div class="card-inner" id="resume-card">
+				<div class="card-wrap">
+					<!--
+						Resume
+					-->
+					<div class="content resume">
+							<!-- title -->
+						<div class="title">Resume</div>
+							<!-- content -->
+							<div class="row">
+								<!-- experience -->
+								<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+									<div class="resume-title border-line-h">
+										<div class="icon"><i class="ion ion-briefcase"></i></div>
+										<div class="name">Experience</div>
+									</div>
+									<div class="resume-items">
+										<div class="resume-item border-line-h active">
+											<div class="date">February 2020 - Present (5 years 8 months)</div>
+											<div class="name">iOS App Developer</div>
+											<div class="company"><span style="color:red;font-weight:bold;">V Group Inc.</span>, Bhopal, Madhya Pradesh, India</div>
+											<p>
+												Developing and maintaining iOS applications, integrating Crashlytics, SwiftLint, and APNS. Collaborating with cross-functional teams to deliver high-quality mobile solutions.
+											</p>
+										</div>
+										<div class="resume-item border-line-h active">
+											<div class="date">September 2018 - February 2020 (1 year 6 months)</div>
+											<div class="name">iOS App Developer</div>
+											<div class="company"><span style="color:red;font-weight:bold;">OMSOFTWARE PVT. LTD</span>, Bhopal Area, India</div>
+											<p>
+												Worked on various iOS projects, focusing on app development, testing, and deployment. Enhanced user experience and app performance.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!-- education -->
+								<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+									<div class="resume-title border-line-h">
+										<div class="icon"><i class="ion ion-university"></i></div>
+										<div class="name">Education</div>
+									</div>
+									<div class="resume-items">
+										<div class="resume-item border-line-h active">
+											<div class="date">2015 - 2019</div>
+											<div class="name">Bachelor of Engineering - BE, Computer Science</div>
+											<div class="company">VNS Group of Institution, VNS Campus, Vidya Vihar, Nathu Barkheda, Neelbud, Bhopal-462044</div>
+											<p>
+												Completed Bachelor of Engineering in Computer Science.
+											</p>
+										</div>
+									</div>
+								</div>
+								<!--
+								<div class="col col-d-6 col-t-12 col-m-12 border-line-v">
+									<div class="resume-item border-line-h active">
+										<div class="resume-title border-line-h">
+											<div class="icon">
+												<i class="ion ion-ios-paper"></i>
+											</div>
+											<div class="name">Training & Certifications</div>
+										</div>
+										<div class="date">2020 - 2021</div>
+										<div class="name">Python Full Stack Development</div>
+										<div class="company"><b>GIST TechnoSolutions, Bhopal</b></div>
+										<p>
+											Full Stack Development in Python (Core Python, Adv. Python, Client side UI
+											design, MySql, MongoDB and Django.
+										</p>
+									</div>
+								</div>
+							-->
+							</div>
+								<div class="clear"></div>
+						
+
+					</div>
+					<!--
+						Skills
+					-->
+
+					<div class="content skills">
+						<!-- title -->
+						<div class="title">My Skills</div>
+						<!-- content -->
+						<div class="row">
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="skills-list">
+									<div class="skill-title border-line-h">
+										<div class="icon"><i class="ion ion-code"></i></div>
+										<div class="name">Programming</div>
+									</div>
+									<ul>
+										<li class="border-line-h">
+											<div class="name">Swift</div>
+											<div class="progress">
+												<div class="percentage" style="width:90%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h">
+											<div class="name">Objective-C</div>
+											<div class="progress">
+												<div class="percentage" style="width:70%;"></div>
+											</div>
+										</li>
+										<li>
+											<div class="name">Xcode</div>
+											<div class="progress">
+												<div class="percentage" style="width:85%;"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="col col-d-6 col-t-6 col-m-12 border-line-v">
+								<div class="skills-list">
+									<div class="skill-title border-line-h">
+										<div class="icon"><i class="ion ion-ios-analytics"></i></div>
+										<div class="name">Tools & Technologies</div>
+									</div>
+									<ul>
+										<li class="border-line-h">
+											<div class="name">Crashlytics</div>
+											<div class="progress">
+												<div class="percentage" style="width:90%;"></div>
+											</div>
+										</li>
+										<li class="border-line-h">
+											<div class="name">SwiftLint</div>
+											<div class="progress">
+												<div class="percentage" style="width:80%;"></div>
+											</div>
+										</li>
+										<li>
+											<div class="name">APNS</div>
+											<div class="progress">
+												<div class="percentage" style="width:85%;"></div>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--
+				Card - Works
+			-->
+			<div class="card-inner" id="works-card">
+				<div class="card-wrap">
+					<!--
+						Works
+					-->
+					<div class="content works">
+						<!-- title -->
+						<div class="title">College Time Works</div>
+						<!-- filters -->
+
+						<!-- content -->
+						<div class="row grid-items border-line-v" style="position: relative; height: 1220.08px;">
+
+							<!-- work item MPP -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 0px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/wifyfood.png" class="name has-popup-image">
+											<img src="vcard/images/projects/wifyfood.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://wifyfood.com/" target="_blank">WifyFood - ghar wali feeling</a>
+										<div class="category">Web Development</div>
+									</div>
+								</div>
+							</div>
+
+
+							<!-- work item photo -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 0px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/certificatevalidator.png"
+											class="name has-popup-image">
+											<img src="vcard/images/projects/certificatevalidator.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://verify.kratigence.com/" target="_blank">Certificate Verificaton
+											System</a>
+										<div class="category">Web Development</div>
+									</div>
+								</div>
+							</div>
+
+
+
+							<!-- work item music -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 49.9969%; top: 257.313px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/foodshala.png" class="name has-popup-image">
+											<img src="vcard/images/projects/foodshala.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://github.com/adarsh0562/FoodShala-" class="name has-popup"
+											target="_blank">Online Food Ordering Web App</a>
+										<div class="category">Web Development</div>
+									</div>
+								</div>
+							</div>
+
+							<!-- work item video -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 49.9969%; top: 0px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/indofluent.png" class="name has-popup-image">
+											<img src="vcard/images/projects/indofluent.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://indofluent.herokuapp.com/" target="_blank">IndoFluent - A
+											native language learning App</a>
+										<div class="category">Web Development & Python</div>
+									</div>
+								</div>
+							</div>
+
+
+
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/thenewsers.png" class="name has-popup-image">
+											<img src="vcard/images/projects/thenewsers.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://mydjangowork.herokuapp.com/naradMuni_News/" target="_blank">THE
+											NEWSERS - A real time News App</a>
+										<div class="category">Django, Python,APIs & Web Development</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/youtubedownloader.png"
+											class="name has-popup-image">
+											<img src="vcard/images/projects/youtubedownloader.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="#" target="_blank">YouTube Video, Full Playlist and Multiple Video
+											Downloader</a>
+										<div class="category">Python, Python GUI Framework Tkinter</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/salsaplayer.png" class="name has-popup-image">
+											<img src="vcard/images/projects/salsaplayer.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://github.com/adarsh0562/The-Salsa-Beat-Machine-Python-based-"
+											target="_blank">The Salsa Player</a>
+										<div class="category">Python, Python GUI Framework Tkinter</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/urlshortner.png" class="name has-popup-image">
+											<img src="vcard/images/projects/urlshortner.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="#" target="_blank">The URLs Shortner App</a>
+										<div class="category">Django, REST APIs, Python & Web Development</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/pythonmusicplayer.png"
+											class="name has-popup-image">
+											<img src="vcard/images/projects/pythonmusicplayer.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://github.com/adarsh0562/python-Audio-player-MultiThread-"
+											target="_blank">A Python Music Player</a>
+										<div class="category">Python, Python GUI Framework Tkinter</div>
+									</div>
+
+								</div>
+							</div>
+
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/mytextbook.png" class="name has-popup-image">
+											<img src="vcard/images/projects/mytextbook.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://github.com/adarsh0562/MyTextBook-a-python-based-notepad"
+											target="_blank">MyTextBook - A clone of Notepad</a>
+										<div class="category">Python, Python GUI Framework Tkinter</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/vaccineFinder.png" class="name has-popup-image">
+											<img src="vcard/images/projects/vaccineFinder.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://mydjangowork.herokuapp.com/findVaccination/"
+											target="_blank">Vaccine Finder</a>
+										<div class="category">Python, Django, SQLite</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/easylearning.png" class="name has-popup-image">
+											<img src="vcard/images/projects/easylearning.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="#" target="_blank">easyLearning - A eLearning Platform</a>
+										<div class="category">Web Development, PHP & MySQL</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/blackboard.png" class="name has-popup-image">
+											<img src="vcard/images/projects/blackboard.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="#" target="_blank">The Black Board</a>
+										<div class="category">Python, Python GUI Framework Tkinter</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/dictionary.png" class="name has-popup-image">
+											<img src="vcard/images/projects/dictionary.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="#">A Pocket Dictionay App</a>
+										<div class="category">Django, REST APIs, Python & Web Development</div>
+									</div>
+
+								</div>
+							</div>
+							<!-- work item design -->
+							<div class="col col-d-6 col-t-6 col-m-12 grid-item photo border-line-h"
+								style="position: absolute; left: 0%; top: 400.641px;">
+								<div class="box-item">
+									<div class="image">
+										<a href="vcard/images/projects/examconductor.png" class="name has-popup-image">
+											<img src="vcard/images/projects/examconductor.png" alt="">
+											<span class="info">
+												<span class="ion ion-image"></span>
+											</span>
+										</a>
+									</div>
+									<div class="desc">
+										<a href="https://exam.kratigence.com/" target="_blank">The Exam Conductor</a>
+										<div class="category">Web Development, PHP & MySQL</div>
+									</div>
+
+								</div>
+							</div>
+
+							<div class="clear"></div>
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+			<!--
+				Card - Blog -->
+			<div class="card-inner blog fadeInLeft" id="blog-card">
+				<div class="card-wrap" style="">
+
+					<!--
+						Blog
+					-->
+					<div class="content blog">
+
+						<!-- title -->
+						<div class="title"><span class="first-word">Latest</span> Posts</div>
+
+						<!-- content -->
+						<div class="row border-line-v blogs-page">
+							<div class="col col-d-12 col-t-12 col-m-12">
+								<div class="center">
+									<section class="error">
+										<h1 class="error__title">404</h1><br>
+										<h2 class="error__type">Blog not found</h2>
+										<p class="error__cta">We’re sorry, Blogs are not posted yet! Please check other
+											sections <a class="error__link error__link--purple" href="#about-card">Home
+												Page</a> </p>
+									</section>
+								</div>
+
+								<div class="astronaut">
+									<img src="https://images.vexels.com/media/users/3/152639/isolated/preview/506b575739e90613428cdb399175e2c8-space-astronaut-cartoon-by-vexels.png"
+										alt="" class="src">
+								</div>
+
+							</div>
+
+							<div class="clear"></div>
+
+						</div>
+
+					</div>
+
+				</div>
+			</div>
+
+			<!--
+				Card - Contacts
+			-->
+			<div class="card-inner contacts" id="contacts-card">
+				<div class="card-wrap">
+					<!--
+						Conacts Info
+					-->
+					<div class="content contacts">
+						<!-- title -->
+						<div class="title">Get in Touch</div>
+						<!-- content -->
+						<div class="row">
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="info-list">
+									<ul>
+										<li><strong>Mobile: </strong> 9304712071</li>
+										<li><strong>Email: </strong> satyamgupta3333@gmail.com</li>
+										<li><strong>LinkedIn: </strong> <a href="https://www.linkedin.com/in/satyamkumar-014597181" target="_blank">satyamkumar-014597181</a></li>
+										<li><strong>Location: </strong> Bhopal, Madhya Pradesh, India</li>
+									</ul>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+
+
+					<!--
+						Contact Form
+					-->
+					<div class="content contacts">
+						<!-- title -->
+						<div class="title">Contact Form</div>
+						<!-- content -->
+						<div class="row">
+							<div class="col col-d-12 col-t-12 col-m-12 border-line-v">
+								<div class="contact_form">
+									<form method="post" action="https://formspree.io/f/moqywjgn">
+										<div class="row">
+											<div class="col col-d-6 col-t-6 col-m-12">
+												<div class="group-val">
+													<input type="text" name="name" placeholder="Full Name" required />
+												</div>
+											</div>
+											<div class="col col-d-6 col-t-6 col-m-12">
+												<div class="group-val">
+													<input type="text" name="email" placeholder="Email Address"
+														required />
+												</div>
+											</div>
+											<div class="col col-d-12 col-t-12 col-m-12">
+												<div class="group-val">
+													<input type="text" name="subject" placeholder="Subject" required>
+												</div>
+											</div>
+											<div class="col col-d-12 col-t-12 col-m-12">
+												<div class="group-val">
+													<textarea name="message" placeholder="Your Message"
+														required></textarea>
+												</div>
+											</div>
+										</div>
+
+										<div class="align-left">
+											<strong><input type="submit" name="submit" value="Send Message"></strong>
+										</div>
+									</form>
+									<div class="alert-success">
+										<p>Thanks, your message is sent successfully.</p>
+									</div>
+								</div>
+							</div>
+							<div class="clear"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--
+		jQuery Scripts
+	-->
+	<script src="vcard/js/jquery.min.js"></script>
+	<script src="vcard/js/jquery.validate.js"></script>
+	<script src="vcard/js/jquery.magnific-popup.js"></script>
+	<script src="vcard/js/imagesloaded.pkgd.js"></script>
+	<script src="vcard/js/masonry.pkgd.js"></script>
+	<script src="vcard/js/masonry-filter.js"></script>
+	<script src="vcard/js/jquery.slimscroll.js"></script>
+	<script src="vcard/js/isotope.pkgd.js"></script>
+
+	<script src="vcard/js/owl.carousel.js"></script>
+	<!--
+		Google map api
+	
+	<script>
+		"use strict";
+		var marker;
+
+		function initMap() {
+
+			var myLatlng = { lat: 23.1821502, lng: 77.4200253 };  // lat - 25.5868893 lng: 85.1240009
+
+			var map = new google.maps.Map(document.getElementById('map'), {
+				zoom: 13,
+				center: myLatlng
+			});
+
+			var iconBase = 'assets/images/location.png';
+
+			marker = new google.maps.Marker({
+				map: map,
+				draggable: true,
+				animation: google.maps.Animation.DROP,
+				position: myLatlng,
+				icon: iconBase
+			});
+			marker.addListener('click', toggleBounce);
+
+			map.addListener('center_changed', function () {
+				window.setTimeout(function () {
+					map.panTo(marker.getPosition());
+				}, 3000);
+			});
+
+			marker.addListener('click', function () {
+				map.setCenter(marker.getPosition());
+			});
+
+		}
+
+		function toggleBounce() {
+			if (marker.getAnimation() !== null) {
+				marker.setAnimation(null);
+			} else {
+				marker.setAnimation(google.maps.Animation.BOUNCE);
+			}
+		}
+
+	</script>
+
+
+	<script async defer
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4ppPTHXCpBSoOkLESSfwMlD1zojoMxBc&callback=initMap">
+		</script> -->
+	<!--
+		Main Scripts
+	-->
+	<script src="vcard/js/scripts.js"></script>
+	<script src="vcard/js/blog-not-found.js"></script>
+</body>
+
+</html>
